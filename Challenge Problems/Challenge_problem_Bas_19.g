@@ -7,8 +7,9 @@
 #The Group 19-Basilica can be generated in GAP in Automgrp package using the following:
 Bas19:= AutomatonGroup("a = (c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,b) , b = (c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,a)(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19) , c = (c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c)");
 
-#1. PublicAlice,
+#1. Public key of Alice,
 
+PublicKeyAlice :=
   [ [ (1,18,16,14,12,10,8,6,4,2,19,17,15,13,11,9,7,5,3), [ a^-1*b ], [ a^-1 ], 
           [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], 
           [ 1 ], [ 1 ], [ b^-1 ], [ 1 ], [ 1 ], [ 1 ], [ b^-1 ], 
@@ -44,8 +45,9 @@ Bas19:= AutomatonGroup("a = (c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,b) , b = (c,c,c
           [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], 
           [ b^-1 ], [ 1 ], [ b ], [ a ], [ a ], [ a ] ] ]
 
-# 2. PublicBob, 
- 
+# 2. Public key of Bob, 
+
+PublicKeyBob := 
   [ [ (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19), [ 1 ], [ 1 ], [ 1 ], 
           [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], 
           [ 1 ], [ b^-1 ], [ b^-1 ], [ 1 ], 
@@ -81,8 +83,8 @@ Bas19:= AutomatonGroup("a = (c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,b) , b = (c,c,c
               [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], 
               [ 1 ] ], [ b ], [ 1 ], [ b^-1 ], [ 1 ], [ b^-1 ], [ b^-1*a ] ] ]
 
-# 3. ChannelAlice, 
-  
+# 3. Alice-to-Bob, 
+ TransmittedByAlice := 
   [ 
       [ (1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19), 
           [ (1,7,13,19,6,12,18,5,11,17,4,10,16,3,9,15,2,8,14), [ 1 ], [ 1 ], 
@@ -772,8 +774,8 @@ Bas19:= AutomatonGroup("a = (c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,b) , b = (c,c,c
               [ 1 ], [ 1 ], [ 1 ], [ b ], [ b ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], 
               [ 1 ], [ 1 ] ] ] ]
 
-# 4. ChannelBob, 
- 
+# 4. Bob-to-Alice, 
+ TransmittedByBob :=
   [ 
       [ (1,18,16,14,12,10,8,6,4,2,19,17,15,13,11,9,7,5,3), 
           [ (1,15,10,5,19,14,9,4,18,13,8,3,17,12,7,2,16,11,6), [ a^-1 ], 
