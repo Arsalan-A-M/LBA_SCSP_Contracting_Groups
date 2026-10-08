@@ -4,6 +4,9 @@
 # The conjugated elements transmitted over open channel by Alice and Bob are given in 3 and 4 respectively. 
 # The task is to find the shared key.
 
+#The Group 11-Basilica can be generated in GAP in Automgrp package using the following:
+Bas11:= AutomatonGroup("a = (c,c,c,c,c,c,c,c,c,c,b) , b = (c,c,c,c,c,c,c,c,c,c,a)(1,2,3,4,5,6,7,8,9,10,11) , c = (c,c,c,c,c,c,c,c,c,c,c)");
+
 # 1. Public Alice
 
 [ [ (1,4,7,10,2,5,8,11,3,6,9), [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ b^-1 ], [ 1 ], [ 1 ], 
