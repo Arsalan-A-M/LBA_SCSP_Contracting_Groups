@@ -7,9 +7,10 @@
 #The Group 11-Basilica can be generated in GAP in Automgrp package using the following:
 Bas11:= AutomatonGroup("a = (c,c,c,c,c,c,c,c,c,c,b) , b = (c,c,c,c,c,c,c,c,c,c,a)(1,2,3,4,5,6,7,8,9,10,11) , c = (c,c,c,c,c,c,c,c,c,c,c)");
 
-# 1. Public Alice
+# 1. Public key of Alice
 
-[ [ (1,4,7,10,2,5,8,11,3,6,9), [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ b^-1 ], [ 1 ], [ 1 ], 
+PublicKeyAlice := 
+          [ [ (1,4,7,10,2,5,8,11,3,6,9), [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ b^-1 ], [ 1 ], [ 1 ], 
           [ b^-1 ], [ a ], [ (1,10,8,6,4,2,11,9,7,5,3), [ a^-1 ], [ a^-1*b ], [ 1 ], [ 1 ], 
               [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ] ], [ a ] ], 
       [ (1,4,7,10,2,5,8,11,3,6,9), [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ b ], 
@@ -27,9 +28,10 @@ Bas11:= AutomatonGroup("a = (c,c,c,c,c,c,c,c,c,c,b) , b = (c,c,c,c,c,c,c,c,c,c,a
               [ a ], [ a ], [ a ], [ a ] ], [ b^-1*a ], [ a ], [ b^-1*a ], [ a ], [ a ], 
           [ a ], [ a ], [ a ] ] ]
 
-# 2. Public Bob
+# 2. Public key of Bob
 
-[ 
+PublicKeyBob := 
+          [ 
       [ (1,3,5,7,9,11,2,4,6,8,10), [ 1 ], 
           [ (1,3,5,7,9,11,2,4,6,8,10), [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], 
               [ 1 ], [ b ], [ a ], [ b^-1*a ] ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ b ], 
@@ -51,7 +53,7 @@ Bas11:= AutomatonGroup("a = (c,c,c,c,c,c,c,c,c,c,b) , b = (c,c,c,c,c,c,c,c,c,c,a
           [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ b ] ] ]
 
 # 3. Alice-to-Bob
-
+TransmittedByAlice :=
 [ 
       [ (1,3,5,7,9,11,2,4,6,8,10), 
           [ (1,11,10,9,8,7,6,5,4,3,2), 
@@ -1656,7 +1658,7 @@ Bas11:= AutomatonGroup("a = (c,c,c,c,c,c,c,c,c,c,b) , b = (c,c,c,c,c,c,c,c,c,c,a
                   [ (1,3,5,7,9,11,2,4,6,8,10), [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], [ 1 ], 
                       [ 1 ], [ 1 ], [ 1 ], [ a ], [ a ] ], [ a ], [ a ], [ a ] ] ] ] ]
 #  4. Bob-to-Alice
-
+TransmittedByBob :=
 [ 
       [ (1,4,7,10,2,5,8,11,3,6,9), 
           [ (1,9,6,3,11,8,5,2,10,7,4), 
