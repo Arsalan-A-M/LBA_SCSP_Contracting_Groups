@@ -5,7 +5,7 @@
 # The task is to find the shared key.
 
 #The Group 19-Basilica can be generated in GAP in Automgrp package using the following:
-#Bas19:= AutomatonGroup("a = (c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,b) , b = (c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,a)(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19) , c = (c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c)");
+Bas19:= AutomatonGroup("a = (c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,b) , b = (c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,a)(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19) , c = (c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c)");
 
 #1. PublicAlice,
 
