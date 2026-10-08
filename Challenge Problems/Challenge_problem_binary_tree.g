@@ -1,15 +1,14 @@
 # The platform group for this problem is IMG(z^2+i). 
 
-# The public keys of Alice and Bob each consist of five elements. The keys for Alice and Bob are given as a list in 1 and 2 respectively. 
-# The conjugated elements transmitted over open channel by Alice and Bob are given in 3 and 4 respectively. 
+# The public keys of Alice and Bob each consist of five elements. The keys for Alice and Bob are given as lists <PublicKeyAlice> and <PublicKeyBob> respectively. 
+# The conjugated elements transmitted over open channel by Alice and Bob are given <TransmittedByAlice> and <TransmittedByBob> respectively. 
 # The task is to find the shared key.
 
 # The Group IMG(z^2+i) can be generated in GAP in Automgrp package using the following:
-# G := AutomatonGroup("a = (1,1)(1,2) , b = (a,c) , c = (b,1) , 1 = (1,1) ");
+G := AutomatonGroup("a = (1,1)(1,2) , b = (a,c) , c = (b,1) , 1 = (1,1) ");
 
-# 1. PublicAlice 
   
-  [ 
+PublicKeyAlice :=  [ 
       [ (1,2), 
           [ (), 
               [ (1,2), 
@@ -190,10 +189,8 @@
                           [ (1,2), 
                               [ (1,2), [ a ], 
                                   [ (), [ (1,2), [ a ], [ c ] ], [ c ] ] ], 
-                              [ (1,2), [ b ], [ 1 ] ] ] ] ] ] ] ] ]. 
-
-# 2. PublicBob 
-  
+                              [ (1,2), [ b ], [ 1 ] ] ] ] ] ] ] ] ];
+PublicKeyBob :=   
   [ 
       [ (), 
           [ (), 
@@ -398,10 +395,8 @@
                               [ (1,2), [ b ], [ 1 ] ] ], [ 1 ] ] ], 
                   [ (), [ b ], 
                       [ (), [ (1,2), [ 1 ], [ b ] ], [ (1,2), [ b ], [ 1 ] ] ] 
-                     ] ] ] ] ].
-
-# 3. ChannelAlice 
-   [ 
+                     ] ] ] ] ];
+TransmittedByAlice := [ 
       [ (), 
           [ (1,2), 
               [ (1,2), 
@@ -7181,10 +7176,8 @@
                                                       [ (1,2), [ c ], [ a ] ], 
                                                       [ c ] ], [ a ] ] ], 
                                           [ (1,2), [ (1,2), [ a ], [ c ] ], 
-                                              [ c ] ] ] ] ] ] ] ] ] ] ] ], 
-
-# 4. ChannelBob 
-
+                                              [ c ] ] ] ] ] ] ] ] ] ] ] ];
+TransmittedByBob := 
   [ 
       [ (1,2), 
           [ (1,2), 
@@ -15750,4 +15743,4 @@
                                                       [ (1,2), [ a ], [ c ] ], 
                                                       [ c ] ] ], 
                                               [ (1,2), [ b ], [ 1 ] ] ] ] ] ] 
-                             ] ] ] ] ] ] ].
+                             ] ] ] ] ] ] ];
